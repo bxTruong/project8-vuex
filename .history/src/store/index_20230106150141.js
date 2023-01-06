@@ -9,7 +9,7 @@ export default createStore({
         postListModule,
         postModule
     },
-    strict: debug,
+    strict: process.env.NODE_ENV !== 'production',
     plugins: debug ? [createLogger()] : []
 })
 

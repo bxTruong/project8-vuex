@@ -9,7 +9,7 @@ export default createStore({
         postListModule,
         postModule
     },
-    strict: debug,
+    strict:debug,
     plugins: debug ? [createLogger()] : []
 })
 
