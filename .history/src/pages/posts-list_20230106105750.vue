@@ -1,0 +1,28 @@
+<template>
+    <h1>News feed</h1>
+    <div v-if="posts.length">
+        <ul v-for="item in posts" :key="item.id">
+            <router-link :to="{ name: 'post-detail-router', params: { id: item.id } }"> {{
+                item.title
+            }}</router-link>
+        </ul>
+
+    </div>
+    <!-- <div v-else-if="error">{{ error.message }}</div> -->
+</template>
+
+<script>
+import { useStore } from "vuex"
+import { computed } from "vue"
+import { createNamespacedHelpers } from 'vuex'
+
+const { mapState, mapActions } = createNamespacedHelpers('some/nested/module')
+export default {
+    setup() {
+        const store = useStore()
+        store.dispatch("onGetAllPost")
+        const posts = computed(() => store.state.posts)
+        return { posts }
+    },
+}
+</script>
