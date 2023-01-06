@@ -13,7 +13,7 @@
 <script>
 import { useStore } from "vuex"
 import { computed } from "vue"
-import RouterName from "../router/router-name"
+import RouterName from "../router/router-path"
 
 export default {
     setup() {

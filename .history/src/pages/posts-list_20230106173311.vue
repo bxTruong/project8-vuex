@@ -2,7 +2,7 @@
     <h1>News feed</h1>
     <div v-if="posts?.length">
         <ul v-for="item in posts" :key="item.id">
-            <router-link :to="{ name: RouterName.POST_DETAIL, params: { id: item.id } }"> {{
+            <router-link :to="{ name: '', params: { id: item.id } }"> {{
                 item.title
             }}</router-link>
         </ul>
