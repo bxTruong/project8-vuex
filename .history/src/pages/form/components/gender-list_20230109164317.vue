@@ -2,7 +2,8 @@
     <div class="container text-center">
         <div class="row">
             <div class="col border" v-for="item in genders" :key="item"
-                :class="{ 'bg-primary': item.id == genderSelected?.id }" @click="onPressGender(item)">
+                :class="{ 'bg-primary': item.id == genderSelected?.id }" 
+                @click="onPressGender(item)">
                 {{ item.title }}
             </div>
         </div>
@@ -15,7 +16,7 @@ import { computed } from "vue";
 
 const store = useStore()
 store.dispatch("formModule/getAllGendersListAct")
-const genders = computed(() => { return store.state.formModule.genders })
+const genders = computed(() { store.state.formModule.genders)
 
 let genderSelected = {}
 

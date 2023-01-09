@@ -1,6 +1,6 @@
 import getAllPost from "../../../uses/get-all-post.js"
 
-export default {
+const postListModule = {
     namespaced: true,
 
     sate: {

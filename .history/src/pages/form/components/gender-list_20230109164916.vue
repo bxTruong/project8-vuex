@@ -2,7 +2,7 @@
     <div class="container text-center">
         <div class="row">
             <div class="col border" v-for="item in genders" :key="item"
-                :class="{ 'bg-primary': item.id == genderSelected?.id }" @click="onPressGender(item)">
+                :class="{ 'bg-primary': true }" @click="onPressGender(item)">
                 {{ item.title }}
             </div>
         </div>

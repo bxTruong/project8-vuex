@@ -1,6 +1,6 @@
 export default {
     namespaced: true,
-
+    
     state: {
         genderSelected: {},
         genders: [
@@ -19,7 +19,7 @@ export default {
 
     actions: {
         changeGenderAct({ commit }, { genderModel }) {
-            commit("onChangeGender", genderModel)
+            commit("onChangeGendersList", genderModel)
         },
         getAllGendersListAct({ commit }) {
             const genders = [
