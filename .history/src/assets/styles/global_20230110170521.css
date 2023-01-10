@@ -1,0 +1,14 @@
+.form-handling {
+    background: linear-gradient(180deg, #17B8D3 0%, #128FA4 100%);
+}
+
+#app {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    min-height: 100vh;
+}
+.avt-profile{
+    width: ;
+}
